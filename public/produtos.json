@@ -1,0 +1,23 @@
+{
+  "success": true,
+  "products": [
+    {
+      "id": 1,
+      "productName": "Óculos Ray-Ban",
+      "price": 299.9,
+      "photo": "/oculos1.png"
+    },
+    {
+      "id": 2,
+      "productName": "Óculos Feminino",
+      "price": 199.9,
+      "photo": "/oculos2.png"
+    },
+    {
+      "id": 3,
+      "productName": "Lentes de Contato",
+      "price": 99.9,
+      "photo": "/oculos3.png"
+    }
+  ]
+}
