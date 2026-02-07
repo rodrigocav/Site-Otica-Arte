@@ -1,0 +1,32 @@
+.card-container {
+  border: 2px solid #000; /* Borda preta do seu rascunho */
+  border-radius: 20px;    /* Cantos bem arredondados */
+  padding: 20px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 150px;
+  transition: all 0.3s ease;
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+.card-container:hover {
+  background-color: #f9f9f9;
+  transform: scale(1.02); /* Aumenta levemente ao passar o mouse */
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.card-text {
+  font-size: 0.85rem;
+  color: #666;
+  line-height: 1.4;
+}

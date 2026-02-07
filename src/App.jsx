@@ -1,6 +1,7 @@
 import Header from './components/header'
 import Hero from './components/hero'
 import { RelatedProducts } from "./components/RelatedProducts/RelatedProducts";
+import Services from './components/Services';
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
       <Header />
       <Hero />
       <RelatedProducts onProductClick={handleProductClick} />
+      <Services />
     </>
   );
 }

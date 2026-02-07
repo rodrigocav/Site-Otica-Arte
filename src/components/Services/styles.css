@@ -1,0 +1,50 @@
+.services-section {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.services-title {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+  color: #539CC6;
+}
+
+.services-grid {
+  display: grid;
+  /* Cria 3 colunas iguais no desktop */
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 20px;
+}
+
+.service-card {
+  border: 2px solid #000; /* Borda preta conforme desenho */
+  border-radius: 15px;    /* Cantos arredondados */
+  padding: 20px;
+  background-color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px); /* Efeito visual ao passar o mouse */
+}
+
+.service-card h3 {
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.service-card p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Responsividade: No celular fica 1 card por linha */
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
