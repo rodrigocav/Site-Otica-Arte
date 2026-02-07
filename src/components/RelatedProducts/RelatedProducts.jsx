@@ -1,40 +1,37 @@
-import { useEffect, useState, useRef } from 'react';
-import './styles.css';
+import { useEffect, useState, useRef } from "react";
+import "./styles.css";
 import { ProductCard } from "../ProductCard/ProductCard";
-import leftArrow from '../../assets/arrow-left.png';
-import rightArrow from '../../assets/arrow-right.png';
+import leftArrow from "../../assets/arrow-left.png";
+import rightArrow from "../../assets/arrow-right.png";
 
 export function RelatedProducts({ onProductClick }) {
   const [products, setProducts] = useState([]);
   const carouselRef = useRef(null);
 
   useEffect(() => {
-    fetch('/produtos.json')
-      .then(response => response.json())
-      .then(data => {
-        if (data.success) {
-          setProducts(data.products);
-        }
+    fetch("/produtos.json")
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.success) setProducts(data.products);
       })
-      .catch(error => console.error('Erro ao buscar produtos:', error));
+      .catch((err) => console.error("Erro:", err));
   }, []);
 
   const handleScroll = (direction) => {
-    if (carouselRef.current) {
-      const scrollAmount = carouselRef.current.offsetWidth;
+    if (!carouselRef.current) return;
 
-      if (direction === 'left') {
-        carouselRef.current.scrollLeft -= scrollAmount;
-      } else {
-        carouselRef.current.scrollLeft += scrollAmount;
-      }
+    const scrollAmount = carouselRef.current.offsetWidth * 0.8;
+
+    if (direction === "left") {
+      carouselRef.current.scrollLeft -= scrollAmount;
+    } else {
+      carouselRef.current.scrollLeft += scrollAmount;
     }
   };
 
   return (
     <section className="related-products">
       <div className="container">
-
         <div className="section-header">
           <div className="title-container">
             <div className="line"></div>
@@ -44,8 +41,8 @@ export function RelatedProducts({ onProductClick }) {
         </div>
 
         <div className="content">
-          <button className="arrow-btn left" onClick={() => handleScroll('left')}>
-            <img src={leftArrow} alt="Seta para esquerda" />
+          <button className="arrow-btn left" onClick={() => handleScroll("left")}>
+            <img src={leftArrow} alt="Esquerda" />
           </button>
 
           <div className="carousel" ref={carouselRef}>
@@ -58,11 +55,13 @@ export function RelatedProducts({ onProductClick }) {
             ))}
           </div>
 
-          <button className="arrow-btn right" onClick={() => handleScroll('right')}>
-            <img src={rightArrow} alt="Seta para direita" />
+          <button
+            className="arrow-btn right"
+            onClick={() => handleScroll("right")}
+          >
+            <img src={rightArrow} alt="Direita" />
           </button>
         </div>
-
       </div>
     </section>
   );

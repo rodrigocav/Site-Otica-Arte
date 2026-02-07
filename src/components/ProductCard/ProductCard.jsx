@@ -11,10 +11,10 @@ export function ProductCard({ product, onClick }) {
 
       <div className="product-info">
         <h3>{product.productName}</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Qualidade, conforto e estilo para o seu dia a dia.</p>
       </div>
 
-      <button onClick={() => onClick(product)}>
+      <button className="details-btn" onClick={() => onClick(product)}>
         DETALHES
       </button>
     </div>
