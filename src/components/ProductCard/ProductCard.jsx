@@ -1,4 +1,5 @@
 import "./styles.css";
+import productsData from "../../data/produtos.json";
 
 export function ProductCard({ product, onClick }) {
   if (!product) return null;
