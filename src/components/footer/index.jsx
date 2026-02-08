@@ -14,8 +14,7 @@ const Footer = () => {
           <h2 className="footer-logo">ÓTICA ARTE</h2>
           <p className="footer-tagline">Qualidade e estilo para os seus olhos.</p>
           <div className="social-links">
-            <a href="#" aria-label="Instagram">Instagram</a>
-            <a href="#" aria-label="Facebook">Facebook</a>
+            <a href="instagram: www.instagram.com/otica_arte" aria-label="Instagram">Instagram</a>
           </div>
         </div>
 
@@ -23,10 +22,10 @@ const Footer = () => {
         <div className="footer-column contact">
           <h3 className="column-title">CONTATO</h3>
           <ul className="contact-list">
-            <li><strong>WhatsApp:</strong> (11) 99999-9999</li>
+            <li><strong>Telefone:</strong>{" "}<a href="telefone:+551158179554">(11) 5817-9554</a></li>
             <li><strong>Email:</strong> contato@oticaarte.com.br</li>
-            <li><strong>Endereço:</strong> Rua das Lentes, 123 - Centro</li>
-            <li><strong>Atendimento:</strong> Seg a Sex, 09h às 18h</li>
+            <li><strong>Endereço:</strong> R. Thereza Mouco de Oliveira, 66 <br/> Vila Maracana, São Paulo - SP </li>
+            <li><strong>Atendimento:</strong> Seg a Sex, 09h às 19h e Sábado 09h às 13h</li>
           </ul>
         </div>
 
@@ -50,7 +49,7 @@ const Footer = () => {
       </div>
 
       <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} Ótica Arte - Desenvolvido por você.</p>
+        <p>&copy; {new Date().getFullYear()} Ótica Arte - Desenvolvido por Franco Tech Solutions.</p>
       </div>
     </footer>
   );

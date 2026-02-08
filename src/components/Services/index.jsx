@@ -4,7 +4,7 @@ import ServiceCard from '../ServiceCard';
 
 const Services = () => {
   const listaServicos = [
-    { id: 1, titulo: "Exame de Vista", desc: "Realize seu exame com especialistas." },
+    { id: 1, titulo: "Exame de Vista", desc: "Realize seu exame com especialista." },
     { id: 2, titulo: "Ajuste de Armação", desc: "Ajustamos sua armação para maior conforto." },
     { id: 3, titulo: "Limpeza Ultrassônica", desc: "Limpeza profunda para suas lentes." },
     { id: 4, titulo: "Manutenção de Hastes", desc: "Reparos e trocas de parafusos." },
