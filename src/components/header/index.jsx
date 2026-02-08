@@ -4,12 +4,16 @@ function Header() {
   const [open, setOpen] = useState(false)
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow">
+    <header className="fixed top-0 left-0 right-0 z-[900] bg-white shadow">
       <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         
         {/* Logo */}
         <div>
-          <img src="/logo.png" alt="logo otica arte" className="h-12 md:h-16 lg:h-20" />
+          <img
+            src="/logo.png"
+            alt="logo otica arte"
+            className="h-12 md:h-16 lg:h-20"
+          />
         </div>
 
         {/* Menu Desktop */}
@@ -21,22 +25,23 @@ function Header() {
         </ul>
 
         {/* Botão Mobile */}
-        <button 
-          onClick={() => setOpen(!open)} 
-          className="lg:hidden text-gray-700 focus:outline-none"
+        <button
+          onClick={() => setOpen(!open)}
+          className="lg:hidden text-gray-700 text-2xl focus:outline-none"
         >
           ☰
         </button>
       </nav>
 
-      {/* Menu Mobile */}
+      {/* MENU MOBILE */}
       <div
-        className={`lg:hidden fixed top-0 right-0 h-full w-64 bg-white shadow transform transition-transform duration-300 ${
+        className={`lg:hidden fixed top-0 right-0 h-full w-64 bg-white shadow z-[1001] transform transition-transform duration-300 ${
           open ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
-        <button 
-          onClick={() => setOpen(false)} 
+        {/* Botão fechar */}
+        <button
+          onClick={() => setOpen(false)}
           className="absolute top-4 right-4 text-2xl"
         >
           ✕
@@ -50,11 +55,11 @@ function Header() {
         </ul>
       </div>
 
-      {/* Overlay */}
+      {/* OVERLAY */}
       {open && (
-        <div 
-          onClick={() => setOpen(false)} 
-          className="fixed inset-0 bg-black/40 lg:hidden"
+        <div
+          onClick={() => setOpen(false)}
+          className="fixed inset-0 bg-black/50 z-[1000] lg:hidden"
         />
       )}
     </header>
