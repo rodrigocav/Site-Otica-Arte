@@ -13,10 +13,18 @@ function App() {
   return (
     <>
       <Header />
+      <section id="about">
       <Hero />
+      </section>
+      <section id="products">
       <RelatedProducts onProductClick={handleProductClick} />
+      </section>
+      <section id="services">
       <Services />
+      </section>
+      <section id="contact">
       <Footer />
+      </section>
     </>
   );
 }

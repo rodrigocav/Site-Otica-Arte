@@ -5,3 +5,11 @@
   --primary: #539CC6;
   --secondary: #D15197;
 }
+html {
+  scroll-behavior: smooth;
+}
+
+
+section {
+  scroll-margin-top: 100px; 
+}
