@@ -5,19 +5,29 @@
       "id": 1,
       "productName": "Óculos Ray-Ban",
       "price": 299.9,
-      "photo": "/product.photo.webp"
+      "photo": "/product.photo.webp",
+      "productDescription": "Estilo clássico com proteção e conforto para o dia a dia."
     },
     {
       "id": 2,
       "productName": "Óculos Feminino",
       "price": 199.9,
-      "photo": "/oculos2.png"
+      "photo": "/oculos_feminino.webp",
+      "productDescription": "Design moderno, leve e elegante para qualquer ocasião."
     },
     {
       "id": 3,
       "productName": "Lentes de Contato",
       "price": 99.9,
-      "photo": "/lente-de-contato.png"
+      "photo": "/lente-de-contato.png",
+      "productDescription": "Visão nítida com máximo conforto durante todo o dia."
+    },
+    {
+      "id": 4,
+      "productName": "Oculos de Sol",
+      "price": 9.9,
+      "photo": "oculos_de_sol.webp",
+      "productDescription": "Visão nítida com máximo"
     }
   ]
 }

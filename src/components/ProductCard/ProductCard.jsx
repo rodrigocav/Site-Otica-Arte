@@ -1,5 +1,4 @@
 import "./styles.css";
-import productsData from "../../data/produtos.json";
 
 export function ProductCard({ product, onClick }) {
   if (!product) return null;
@@ -12,7 +11,7 @@ export function ProductCard({ product, onClick }) {
 
       <div className="product-info">
         <h3>{product.productName}</h3>
-        <p>Qualidade, conforto e estilo para o seu dia a dia.</p>
+        <p>{product.productDescription}</p>
       </div>
 
       <button className="details-btn" onClick={() => onClick(product)}>

@@ -3,19 +3,18 @@ import "./styles.css";
 import { ProductCard } from "../ProductCard/ProductCard";
 import leftArrow from "../../assets/arrow-left.png";
 import rightArrow from "../../assets/arrow-right.png";
+import data from "../../data/produtos.json";
+
 
 export function RelatedProducts({ onProductClick }) {
   const [products, setProducts] = useState([]);
   const carouselRef = useRef(null);
 
-  useEffect(() => {
-    fetch("/produtos.json")
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.success) setProducts(data.products);
-      })
-      .catch((err) => console.error("Erro:", err));
-  }, []);
+useEffect(() => {
+  if (data.success) {
+    setProducts(data.products);
+  }
+}, []);
 
   const handleScroll = (direction) => {
     if (!carouselRef.current) return;
