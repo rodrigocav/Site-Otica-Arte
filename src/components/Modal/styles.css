@@ -1,0 +1,125 @@
+/* OVERLAY */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* CONTAINER */
+.modal-content {
+  background: #fff;
+  width: 90%;
+  max-width: 770px;
+  padding: 1.8rem;
+  border-radius: 6px;
+  position: relative;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* BOTÃO FECHAR */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  background: transparent;
+  font-size: 1.6rem;
+  color: #999;
+  border: none;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: #e91e63;
+}
+
+/* BODY */
+.modal-body {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .modal-body {
+    flex-direction: column;
+    align-items: flex-start;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+}
+
+/* IMAGEM */
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.image-container img {
+  width: 100%;
+  max-width: 260px;
+  object-fit: contain;
+}
+
+/* INFORMAÇÕES */
+.info-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.info-container h2 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #0a1f44;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+
+.description {
+  font-size: 0.85rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+
+
+/* BOTÃO */
+.detalhes-btn {
+  display: inline-block;
+  width: fit-content;
+  background: #2b1a55;
+  color: #fff;
+  padding: 0.7rem 1.6rem;
+  border-radius: 4px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: filter 0.2s;
+}
+
+.detalhes-btn:hover {
+  filter: brightness(0.9);
+}
+
+/* ANIMAÇÃO */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
