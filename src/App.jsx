@@ -5,6 +5,7 @@ import Hero from "./components/hero";
 import { RelatedProducts } from "./components/RelatedProducts/RelatedProducts";
 import Services from "./components/Services";
 import { Modal } from "./components/Modal/Modal";
+import About from "./components/about";
 
 function App() {
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -16,8 +17,9 @@ function App() {
   return (
     <>
       <Header />
-      <section id="about">
         <Hero />
+      <section id="about">
+        <About />
       </section>
       <section id="products">
         <RelatedProducts onProductClick={handleProductClick} />
