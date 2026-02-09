@@ -1,32 +1,128 @@
+.services-section {
+  padding: 80px 20px;
+  width: 100%;
+  background: linear-gradient(180deg, #f7f9fb 0%, #ffffff 100%);
+  text-align: center;
+}
+
+.services-title {
+  font-size: 2.4rem;
+  margin-bottom: 50px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #539CC6;
+}
+
+/* GRID DESKTOP */
+.services-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* CARD */
 .card-container {
-  border: 2px solid #000; /* Borda preta do seu rascunho */
-  border-radius: 20px;    /* Cantos bem arredondados */
-  padding: 20px;
-  background-color: #ffffff;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 28px 22px;
+  min-height: 160px;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 150px;
-  transition: all 0.3s ease;
-  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  text-align: center;
+
+  border: none;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* brilho sutil */
+.card-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, #539CC6, #e91e63);
+  opacity: 0;
+  transition: 0.35s ease;
+  border-radius: 18px;
+}
+
+.card-container:hover::before {
+  opacity: 0.08;
 }
 
 .card-container:hover {
-  background-color: #f9f9f9;
-  transform: scale(1.02); /* Aumenta levemente ao passar o mouse */
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.15);
 }
 
 .card-title {
-  font-size: 1.1rem;
-  font-weight: bold;
+  font-size: 1.15rem;
+  font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 10px;
-  color: #333;
+  color: #0a1f44;
+  letter-spacing: 1px;
+  z-index: 2;
 }
 
 .card-text {
-  font-size: 0.85rem;
-  color: #666;
-  line-height: 1.4;
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.5;
+  z-index: 2;
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+/* ===== MOBILE CARROSSEL ===== */
+@media (max-width: 900px) {
+  .services-title {
+    font-size: 1.9rem;
+  }
+
+  .services-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 20px;
+    padding: 10px 0;
+    scroll-snap-type: x mandatory;
+  }
+
+  .services-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .services-grid > .card-container {
+    flex: 0 0 100%; /* card ocupa 100% da largura da tela */
+    scroll-snap-align: start;
+    border-radius: 18px;
+    padding: 28px 22px;
+    max-width: 400px; /* opcional para limitar largura em telas maiores */
+    margin: 0 auto;
+  }
+
+  .card-container:hover {
+    transform: none;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  }
+
+  .card-title {
+    font-size: 1.25rem;
+    line-height: 1.35;
+  }
+
+  .card-text {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
 }

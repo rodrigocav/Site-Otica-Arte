@@ -34,7 +34,7 @@ useEffect(() => {
         <div className="section-header">
           <div className="title-container">
             <div className="line"></div>
-            <h2>Produtos relacionados</h2>
+            <h2>Produtos</h2>
             <div className="line"></div>
           </div>
         </div>

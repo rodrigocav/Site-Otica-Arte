@@ -2,7 +2,6 @@ import React from 'react';
 import './styles.css';
 
 const Footer = () => {
-  // Substitua o link dentro do src pelo link real do Google Maps da sua cidade
   const googleMapsUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.7453759905648!2d-46.749693799999996!3d-23.6492881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce53df3d6acad3%3A0x1e7fac091890c4b1!2s%C3%93tica%20Arte!5e0!3m2!1spt-BR!2sbr!4v1770506801315!5m2!1spt-BR!2sbr";
 
   return (
@@ -13,9 +12,11 @@ const Footer = () => {
         <div className="footer-column brand">
           <h2 className="footer-logo">ÓTICA ARTE</h2>
           <p className="footer-tagline">Qualidade e estilo para os seus olhos.</p>
-          <div className="social-links">
-            <a href="instagram: www.instagram.com/otica_arte" aria-label="Instagram">Instagram</a>
-          </div>
+        <div className="social-links">
+          <a href="https://www.instagram.com/otica_arte" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+            <img src="/instagram-icon.png" alt="Instagram" className="instagram-icon" />
+            </a>
+        </div>
         </div>
 
         {/* Coluna 2: Informações de Contato */}
@@ -49,7 +50,7 @@ const Footer = () => {
       </div>
 
       <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} Ótica Arte - Desenvolvido por Franco Tech Solutions.</p>
+        <p>&copy; {new Date().getFullYear()} Ótica Arte - Desenvolvido por <a href="https://www.francotechsolutions.com.br">Franco Tech Solutions.</a></p>
       </div>
     </footer>
   );
