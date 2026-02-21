@@ -44,6 +44,7 @@ function Header() {
           <li><a onClick={() => setOpen(false)} href="#about">Sobre</a></li>
           <li><a onClick={() => setOpen(false)} href="#products">Produtos</a></li>
           <li><a onClick={() => setOpen(false)} href="#services">Serviços</a></li>
+          <li><a onClick={() => setOpen(false)} href="#reviews">Avaliações</a></li>
           <li><a onClick={() => setOpen(false)} href="#contact">Contato</a></li>
         </ul>
       </div>
