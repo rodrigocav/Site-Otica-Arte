@@ -24,10 +24,11 @@ const Footer = () => {
           <h3 className="column-title">CONTATO</h3>
           <ul className="contact-list">
             <li><strong>Telefone:</strong>{" "}<a href="telefone:+551158179554">(11) 5817-9554</a></li>
-            <li><strong>Email:</strong> contato@oticaarte.com.br</li>
+            <li><strong>WhatsApp:</strong>{" "}<a href="https://wa.me/5511994285011?text=Olá,%20tudo%20bem?%20Encontrei%20o%20contato%20pelo%20site%20da%20Ótica%20Arte%20e%20gostaria%20de%20mais%20informações."
+            target="_blank" rel="noopener noreferrer">(11) 99428-5011</a></li>
             <li><strong>Endereço:</strong> R. Thereza Mouco de Oliveira, 66 <br/> Vila Maracana, São Paulo - SP </li>
             <li><strong>Atendimento:</strong> Seg a Sex, 09h às 19h e Sábado 09h às 13h</li>
-          </ul>
+            </ul>
         </div>
 
         {/* Coluna 3: Localização (Google Maps) */}

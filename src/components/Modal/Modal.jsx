@@ -4,12 +4,16 @@ import "./styles.css";
 export function Modal({ product, onClose }) {
   if (!product) return null;
 
-  const phone = "+551158179554";
+  const phone = "5511994285011"; 
+
+  const message = `Olá, tudo bem? Vi o modelo ${product.productName} no site da Ótica Arte e gostaria de mais informações.`;
+
+  const whatsappLink = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-
+        
         <button className="close-btn" onClick={onClose}>×</button>
 
         <div className="modal-body">
@@ -27,10 +31,15 @@ export function Modal({ product, onClose }) {
               {product.productDescription || "Produto de alta qualidade."}
             </p>
 
-
-            <a href={`tel:${phone}`} className="detalhes-btn">
-              📞 Ligar para a loja
+            <a 
+              href={whatsappLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="detalhes-btn"
+            >
+              💬 Falar no WhatsApp
             </a>
+
           </div>
 
         </div>

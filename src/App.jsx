@@ -6,18 +6,19 @@ import { RelatedProducts } from "./components/RelatedProducts/RelatedProducts";
 import Services from "./components/Services";
 import { Modal } from "./components/Modal/Modal";
 import About from "./components/about";
+import Reviews from "./components/Reviews/Reviews";
 
 function App() {
   const [selectedProduct, setSelectedProduct] = useState(null);
 
   const handleProductClick = (product) => {
-    setSelectedProduct(product); // abre o modal
+    setSelectedProduct(product);
   };
 
   return (
     <>
       <Header />
-        <Hero />
+      <Hero />
       <section id="about">
         <About />
       </section>
@@ -27,9 +28,8 @@ function App() {
       <section id="services">
         <Services />
       </section>
-      <section id="contact">
-        <Footer />
-      </section>
+      <Reviews />
+      <Footer />
       {/* MODAL */}
       <Modal
         product={selectedProduct}
@@ -40,4 +40,3 @@ function App() {
 }
 
 export default App;
-

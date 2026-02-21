@@ -23,7 +23,12 @@ export default function Hero() {
         </p>
 
         <div className="hero-buttons">
-          <a href="tel:+5511999999999" className="btn-primary">
+          <a
+            href="https://wa.me/5511994285011?text=Olá,%20tudo%20bem?%20Encontrei%20o%20contato%20pelo%20site%20da%20Ótica%20Arte%20e%20gostaria%20de%20receber%20mais%20informações.%20Poderia%20me%20ajudar,%20por%20favor?"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary"
+          >
             Fale Conosco
           </a>
 
