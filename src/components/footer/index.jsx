@@ -5,7 +5,7 @@ const Footer = () => {
   const googleMapsUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.7453759905648!2d-46.749693799999996!3d-23.6492881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce53df3d6acad3%3A0x1e7fac091890c4b1!2s%C3%93tica%20Arte!5e0!3m2!1spt-BR!2sbr!4v1770506801315!5m2!1spt-BR!2sbr";
 
   return (
-    <footer className="footer-container">
+    <footer id="contact" className="footer-container">
       <div className="footer-content">
         
         {/* Coluna 1: Branding */}

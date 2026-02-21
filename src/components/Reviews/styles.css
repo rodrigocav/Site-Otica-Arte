@@ -92,3 +92,45 @@
 .btn-google:hover {
   background: #3367d6;
 }
+
+@media (max-width: 768px) {
+  .reviews-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 0 20px 15px;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+  }
+
+  .reviews-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .review-card {
+    flex: 0 0 90%;
+    min-height: 340px;
+    padding: 36px 28px;
+    border-radius: 18px;
+    scroll-snap-align: center;
+  }
+
+  .review-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .review-stars {
+    font-size: 1rem;
+  }
+
+  .review-meta {
+    font-size: 0.8rem;
+  }
+
+  .review-card p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    max-width: 85%;
+    margin: 0 auto;
+  }
+}
