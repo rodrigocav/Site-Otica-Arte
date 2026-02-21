@@ -3,31 +3,31 @@
   "products": [
     {
       "id": 1,
-      "productName": "Óculos Ray-Ban",
+      "productName": "Óculos de Sol",
       "price": 299.9,
-      "photo": "/product.photo.webp",
-      "productDescription": "Estilo clássico com proteção e conforto para o dia a dia."
+      "photo": "/oculos-de-sol.jpg",
+      "productDescription": "Proteja seus olhos com estilo! Óculos de sol com proteção UV de alta qualidade, designs modernos e conforto garantido. Encontre o seu par perfeito!"
     },
     {
       "id": 2,
       "productName": "Óculos Feminino",
       "price": 199.9,
-      "photo": "/oculos_feminino.webp",
-      "productDescription": "Design moderno, leve e elegante para qualquer ocasião."
+      "photo": "/oculos-feminino.jpg",
+      "productDescription": "Linhas limpas, presença forte. Um modelo pensado para a mulher contemporânea que busca um acessório versátil e cheio de personalidade."
     },
     {
       "id": 3,
       "productName": "Lentes de Contato",
       "price": 99.9,
-      "photo": "/lente-de-contato.webp",
-      "productDescription": "Visão nítida com máximo conforto durante todo o dia."
+      "photo": "/lente-de-contato.jpeg",
+      "productDescription": "Experimente a liberdade de ver o mundo sem limites! Lentes de contato de alta qualidade, confortáveis e seguras, para todos os tipos de visão. Encontre a lente perfeita para você!"
     },
     {
       "id": 4,
-      "productName": "Oculos de Sol",
+      "productName": "Oculos Masculino",
       "price": 9.9,
-      "photo": "oculos_de_sol.webp",
-      "productDescription": "Visão nítida com máximo"
+      "photo": "/oculos-masculino.jpg",
+      "productDescription": "Óculos masculinos com designs robustos e materiais de alta qualidade. Perfeitos para quem não para."
     }
   ]
 }

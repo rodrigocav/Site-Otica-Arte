@@ -1,0 +1,129 @@
+/* HEADER FIXO */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 900;
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+/* NAV */
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* LOGO */
+.logo img {
+  height: 48px;
+}
+
+@media (min-width: 768px) {
+  .logo img {
+    height: 64px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .logo img {
+    height: 80px;
+  }
+}
+
+/* MENU DESKTOP */
+.menu-desktop {
+  display: none;
+  list-style: none;
+  gap: 32px;
+}
+
+.menu-desktop li a {
+  text-decoration: none;
+  color: #374151;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.menu-desktop li a:hover {
+  color: #ec4899;
+}
+
+/* BOTÃO MOBILE */
+.menu-toggle {
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #374151;
+}
+
+/* RESPONSIVO */
+@media (min-width: 1024px) {
+  .menu-desktop {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+}
+
+/* MENU MOBILE */
+.menu-mobile {
+  position: fixed;
+  top: 0;
+  right: -260px;
+  width: 260px;
+  height: 100%;
+  background: white;
+  box-shadow: -2px 0 15px rgba(0, 0, 0, 0.1);
+  transition: right 0.3s ease;
+  z-index: 1001;
+}
+
+.menu-mobile.open {
+  right: 0;
+}
+
+.menu-mobile ul {
+  list-style: none;
+  margin-top: 100px;
+  padding: 0;
+  text-align: center;
+}
+
+.menu-mobile ul li {
+  margin-bottom: 24px;
+}
+
+.menu-mobile ul li a {
+  text-decoration: none;
+  color: #374151;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+/* BOTÃO FECHAR */
+.close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* OVERLAY */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}

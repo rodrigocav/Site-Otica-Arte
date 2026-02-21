@@ -18,7 +18,7 @@
   box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
 }
 
-
+/* Badge Novo */
 .product-card::before {
   content: "Novo";
   position: absolute;
@@ -33,32 +33,37 @@
   letter-spacing: 0.05em;
   user-select: none;
   pointer-events: none;
+  z-index: 2;
 }
 
+/* CONTAINER DA IMAGEM */
 .product-image {
   width: 100%;
-  height: 170px;
+  height: 190px; /* altura fixa */
   background: #f9fafb;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 12px;
+  overflow: hidden;
 }
 
+/* IMAGEM PADRONIZADA */
 .product-image img {
-  width: 80%;
-  height: auto;
-  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* mantém proporção e corta excesso */
   transition: transform 0.3s ease;
 }
 
+/* Zoom suave */
 .product-card:hover .product-image img {
   transform: scale(1.05);
 }
 
+/* INFORMAÇÕES */
 .product-info {
   padding: 16px 18px;
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .product-info h3 {
@@ -72,14 +77,15 @@
   font-size: 0.8rem;
   color: #6b7280;
   line-height: 1.4;
+  flex-grow: 1; /* força alinhamento do botão */
 }
 
-/* Botão moderno e discreto */
+/* BOTÃO */
 .details-btn {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  margin-top: 14px;
   padding: 14px 18px;
   background: transparent;
   color: #3d86ad;
@@ -90,10 +96,8 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   letter-spacing: 0.05em;
   text-align: center;
-  white-space: nowrap; /* evita quebra do texto */
+  white-space: nowrap;
 }
-
-
 
 .details-btn::after {
   content: "→";

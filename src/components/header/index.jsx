@@ -1,53 +1,45 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
+import "./styles.css";
 
 function Header() {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-[900] bg-white shadow">
-      <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <header className="header">
+      <nav className="nav-container">
         
         {/* Logo */}
-        <div>
-          <img
-            src="/logo.png"
-            alt="logo otica arte"
-            className="h-12 md:h-16 lg:h-20"
-          />
+        <div className="logo">
+          <img src="/logo.png" alt="logo otica arte" />
         </div>
 
         {/* Menu Desktop */}
-        <ul className="hidden lg:flex items-center gap-8 text-gray-700 font-medium">
-          <li><a href="#about" className="hover:text-pink-500 transition">Sobre</a></li>
-          <li><a href="#products" className="hover:text-pink-500 transition">Produtos</a></li>
-          <li><a href="#services" className="hover:text-pink-500 transition">Serviços</a></li>
-          <li><a href="#contact" className="hover:text-pink-500 transition">Contato</a></li>
+        <ul className="menu-desktop">
+          <li><a href="#about">Sobre</a></li>
+          <li><a href="#products">Produtos</a></li>
+          <li><a href="#services">Serviços</a></li>
+          <li><a href="#contact">Contato</a></li>
         </ul>
 
         {/* Botão Mobile */}
         <button
+          className="menu-toggle"
           onClick={() => setOpen(!open)}
-          className="lg:hidden text-gray-700 text-2xl focus:outline-none"
         >
           ☰
         </button>
       </nav>
 
       {/* MENU MOBILE */}
-      <div
-        className={`lg:hidden fixed top-0 right-0 h-full w-64 bg-white shadow z-[1001] transform transition-transform duration-300 ${
-          open ? 'translate-x-0' : 'translate-x-full'
-        }`}
-      >
-        {/* Botão fechar */}
+      <div className={`menu-mobile ${open ? "open" : ""}`}>
         <button
+          className="close-btn"
           onClick={() => setOpen(false)}
-          className="absolute top-4 right-4 text-2xl"
         >
           ✕
         </button>
 
-        <ul className="flex flex-col mt-20 gap-6 text-center text-gray-700 font-medium">
+        <ul>
           <li><a onClick={() => setOpen(false)} href="#about">Sobre</a></li>
           <li><a onClick={() => setOpen(false)} href="#products">Produtos</a></li>
           <li><a onClick={() => setOpen(false)} href="#services">Serviços</a></li>
@@ -55,15 +47,15 @@ function Header() {
         </ul>
       </div>
 
-      {/* OVERLAY */}
+      {/* Overlay */}
       {open && (
         <div
+          className="overlay"
           onClick={() => setOpen(false)}
-          className="fixed inset-0 bg-black/50 z-[1000] lg:hidden"
         />
       )}
     </header>
-  )
+  );
 }
 
-export default Header
+export default Header;
