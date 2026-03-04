@@ -2,6 +2,7 @@
 
 Site institucional desenvolvido para a Ótica Arte, com foco na apresentação de produtos, serviços e contato com clientes.
 
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ebfe4810-8454-45b8-83a7-34eef41e0957" />
 ---
 
 ## 🚀 Tecnologias Utilizadas
